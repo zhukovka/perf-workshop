@@ -1,13 +1,39 @@
 <html>
 
 <head>
-  <title>Workshop</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Welcome</h1>
-  <script src="/javascripts/index.js"></script>
+<h1>Event Timing API</h1>
+<p>The <a href="/fid/">First Input Delay (FID)</a> metric measures the time from when a user first interacts with a page
+    to the time when the browser is actually able to begin processing event handlers in response to that interaction.
+    However, in some cases it may also be useful to measure the event processing time itself as well as the time until
+    the next frame can be rendered.</p>
+<p>This is possible with the <a href="https://wicg.github.io/event-timing/">Event Timing API</a> (which is used to
+    measure FID) as it exposes a number of timestamps in the event lifecycle, including:</p>
+<ul>
+    <li><a href="https://w3c.github.io/performance-timeline/#dom-performanceentry-starttime"><code>startTime</code></a>:
+        the time when the browser receives the event.
+    </li>
+    <li>
+        <a href="https://wicg.github.io/event-timing/#dom-performanceeventtiming-processingstart"><code>processingStart</code></a>:
+        the time when the browser is able to begin processing event handlers for the event.
+    </li>
+    <li>
+        <a href="https://wicg.github.io/event-timing/#dom-performanceeventtiming-processingend"><code>processingEnd</code></a>:
+        time when the browser finishes executing all synchronous code initiated from event handlers for this event.
+    </li>
+    <li><a href="https://wicg.github.io/event-timing/#dom-performanceeventtiming-processingstart"><code>duration</code></a>:
+        the time (rounded to 8ms for security reasons) between when the browser receives the event until it's able to
+        paint the next frame after finishing executing all synchronous code initiated from the event handlers.
+    </li>
+</ul>
+<p><a href="https://web.dev/custom-metrics/#event-timing-api">link</a></p>
+<button id="btn">Click me</button>
+
+<script src="/javascripts/index.js"></script>
 </body>
 
 </html>
