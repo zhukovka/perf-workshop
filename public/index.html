@@ -1,13 +1,21 @@
 <html>
 
 <head>
-  <title>Workshop</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Welcome</h1>
-  <script src="/javascripts/index.js"></script>
+<h1>Long Tasks API</h1>
+<p>The <a href="https://w3c.github.io/longtasks/">Long Tasks API</a> is useful for knowing when the browser's main
+    thread is blocked for long enough to affect frame rate or input latency. Currently the API will report any tasks
+    that execute for longer than 50 milliseconds (ms).</p>
+<p>Anytime you need to run expensive code (or load and execute large scripts) it's useful to track whether or not that
+    code blocked the main thread. In fact, many higher-level metrics are built on top of the Long Tasks API themselves
+    (such as <a href="/interactive/">Time to Interactive (TTI)</a> and <a href="/lighthouse-total-blocking-time/">Total
+        Blocking Time (TBT)</a>).</p>
+<p><a href="https://web.dev/custom-metrics/#long-tasks-api">link</a></p>
+<script src="/javascripts/index.js"></script>
 </body>
 
 </html>
