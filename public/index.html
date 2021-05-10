@@ -1,13 +1,24 @@
 <html>
 
 <head>
-  <title>Workshop</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Welcome</h1>
-  <script src="/javascripts/index.js"></script>
+<h1>Navigation Timing API</h1>
+<p>The <a href="https://w3c.github.io/navigation-timing/">Navigation Timing API</a> is similar to the Resource Timing
+    API, but it reports only <a
+            href="https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests">navigation
+        requests</a>. The <code>navigation</code> entry type is also similar to the <code>resource</code> entry type,
+    but it contains some <a href="https://w3c.github.io/navigation-timing/#sec-PerformanceNavigationTiming">additional
+        information</a> specific to only navigation requests (such as when the <code>DOMContentLoaded</code> and <code>load</code>
+    events fire).</p>
+<p>One metric many developers track to understand server response time (<a
+        href="https://en.wikipedia.org/wiki/Time_to_first_byte">Time to First Byte</a>) is available via the Navigation
+    Timing API—specifically it's entry's <code>responseStart</code> timestamp.</p>
+
+<script src="/javascripts/index.js"></script>
 </body>
 
 </html>
