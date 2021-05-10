@@ -1,13 +1,39 @@
 <html>
 
 <head>
-  <title>Workshop</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Welcome</h1>
-  <script src="/javascripts/index.js"></script>
+<h1>Resource Timing API</h1>
+<p>The <a href="https://w3c.github.io/resource-timing/">Resource Timing API</a> gives developers detailed insight into
+    how resources for a particular page were loaded. Despite the name of the API, the information it provides is not
+    just limited to timing data (though there's <a href="https://w3c.github.io/resource-timing/#processing-model">plenty
+        of that</a>). Other data you can access includes:</p>
+<ul>
+    <li><a href="https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-initiatortype">initiatorType</a>:
+        how the resource was fetched: such as from a <code>&lt;script&gt;</code> or <code>&lt;link&gt;</code> tag, or
+        from <code>fetch()</code></li>
+    <li>
+        <a href="https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-nexthopprotocol">nextHopProtocol</a>:
+        the protocol used to fetch the resource, such as <code>h2</code> or <code>quic</code></li>
+    <li>
+        <a href="https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-encodedbodysize">encodedBodySize</a>/<a
+            href="https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-decodedbodysize">decodedBodySize</a>]:
+        the size of the resource in its encoded or decoded form (respectively)
+    </li>
+    <li><a href="https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-transfersize">transferSize</a>:
+        the size of the resource that was actually transferred over the network. When resources are fulfilled via the
+        cache, this value can be much smaller than the <code>encodedBodySize</code>, and in some cases it can be zero
+        (if no cache revalidation is required).
+    </li>
+</ul>
+<p>Note, you can use the <code>transferSize</code> property of resource timing entries to measure a <em>cache hit
+    rate</em> metric or perhaps even a <em>total cached resource size</em> metric, which may be useful in understanding
+    how your resource caching strategy affects performance for repeat visitors.</p>
+<p><a href="https://web.dev/custom-metrics/#resource-timing-api">link</a></p>
+<script src="/javascripts/index.js"></script>
 </body>
 
 </html>
