@@ -1,13 +1,32 @@
 <html>
 
 <head>
-  <title>Workshop</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Welcome</h1>
-  <script src="/javascripts/index.js"></script>
+<h1>Element Timing API</h1>
+<p>
+    The Largest Contentful Paint (LCP) metric is useful for knowing when the largest image or text block was painted to
+    the screen, but in some cases you want to measure the render time of a different element.
+</p>
+<p>
+    For these cases, you can use the Element Timing API. In fact, the Largest Contentful Paint API is actually built on
+    top of the Element Timing API and adds automatic reporting of the largest contentful element, but you can report on
+    additional elements by explicitly adding the <code>elementtiming</code> attribute to them, and registering a
+    PerformanceObserver
+    to observe the element entry type.
+    <a href="https://web.dev/custom-metrics/#element-timing-api">link</a>
+</p>
+<img
+        src="https://res.cloudinary.com/lenazhukova/image/upload/v1620635885/samples/animals/reindeer.jpg"
+        alt="reindeer"
+        elementtiming="hero-image"
+/>
+
+
+<script src="/javascripts/index.js"></script>
 </body>
 
 </html>
