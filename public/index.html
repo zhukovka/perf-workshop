@@ -1,13 +1,22 @@
 <html>
 
 <head>
-  <title>Workshop</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Welcome</h1>
-  <script src="/javascripts/index.js"></script>
+<h1>User Timing API</h1>
+<p>The <a href="https://w3c.github.io/user-timing/">User Timing API</a> is your general purpose measurement API for
+    time-based metrics. It allows you to arbitrarily mark points in time and then later measure the duration between
+    those marks.</p>
+<p>While APIs like <code>Date.now()</code> or <code>performance.now()</code> give you similar abilities, the benefit of
+    using the User Timing API is it integrates well with performance tooling. For example, Chrome DevTools visualizes <a
+            href="https://developers.google.com/web/updates/2018/04/devtools#tabs">User Timing measurements in the
+        Performance panel</a>, and many analytics providers will also automatically track any measurements you make and
+    send the duration data to their analytics back end.</p>
+<p><a href="https://web.dev/custom-metrics/#user-timing-api">link</a></p>
+<script src="/javascripts/index.js"></script>
 </body>
 
 </html>
