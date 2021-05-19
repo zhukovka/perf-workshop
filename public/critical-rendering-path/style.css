@@ -1,0 +1,11 @@
+body {
+    font-size: medium;
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
