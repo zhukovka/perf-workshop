@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/critical-rendering-path', function(req, res, next) {
+  res.render('critical-rendering-path/index', { title: 'Critical Rendering Path' });
+});
+
 module.exports = router;
